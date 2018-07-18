@@ -31,7 +31,8 @@ module.exports = function (app, passport) {
 
         });
         cto.save(function (err, result) {
-            res.redirect('/thanks')
+            req.flash('success','Thank you for Signing Up, We will get back to you shortly.');
+            res.redirect('/')
         })
 
     });
@@ -53,7 +54,8 @@ module.exports = function (app, passport) {
 
         });
         dev.save(function (err, result) {
-            res.redirect('/thanks')
+            req.flash('success','Thank you for Signing Up, we will get back to you shortly.');
+            res.redirect('/')
         })
 
     });
@@ -62,14 +64,6 @@ module.exports = function (app, passport) {
     app.get('/demo', function (req, res) {
 
         res.render('landing/demo', {layout: 'homelayout'});
-    });
-
-    app.get('/thanks', function (req, res) {
-
-        res.render('landing/thanks', {
-            layout: 'users',
-
-        });
     });
 
 

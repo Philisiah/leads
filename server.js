@@ -52,7 +52,7 @@ app.use(express.static('public'));
 
 require('./app/routes.js')(app);
 
-app.listen(process.env.PORT || 4000, function () {
+app.listen(process.env.PORT || 5000, function () {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
