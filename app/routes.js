@@ -50,7 +50,8 @@ module.exports = function (app, passport) {
         var dev = new Dev({
 
             username: req.body.username,
-            email: req.body.email
+            email: req.body.email,
+            email2: req.body.email2
 
         });
         dev.save(function (err, result) {
